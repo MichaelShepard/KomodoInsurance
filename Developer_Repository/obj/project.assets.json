@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\KomodoInsurance\\KomodoInsurance_Console.csproj",
-      "projectName": "KomodoInsurance_Console",
-      "projectPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\KomodoInsurance\\KomodoInsurance_Console.csproj",
+      "projectUniqueName": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj",
+      "projectName": "Developer_Repository",
+      "projectPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj",
       "packagesPath": "C:\\Users\\M\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\KomodoInsurance\\obj\\",
+      "outputPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\M\\AppData\\Roaming\\NuGet\\NuGet.Config",
