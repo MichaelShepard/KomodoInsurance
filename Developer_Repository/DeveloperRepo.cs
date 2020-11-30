@@ -1,12 +1,34 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Developer_Repository
 {
-    class Program
+    public class DeveloperRepo
     {
-        static void Main(string[] args)
+
+
+        private List<DeveloperList> _listOfDevelopers = new List<DeveloperList>();
+
+        // Create
+
+        public void AddDeveloperToList(DeveloperList content)
         {
-            Console.WriteLine("Hello World!");
+            _listOfDevelopers.Add(content);
         }
+
+        // Read
+
+
+
+        // Update
+
+
+
+
+
+        // Delete
     }
 }
