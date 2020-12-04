@@ -28,8 +28,9 @@ namespace KomodoInsurance_Console
                     "3. Create New Developer \n" +
                     "4. Update Existing Developer \n" +
                     "5. Delete Developer \n" +
-                    "6. Go to DevTeams Console \n" +
-                    "7. Exit");
+                    "6. Developers who need a PluralSight license \n" +
+                    "7. Go to DevTeams Console \n" +
+                    "8. Exit");
 
                 //Get the users input
                 string input = Console.ReadLine();
@@ -56,10 +57,14 @@ namespace KomodoInsurance_Console
                         // Delete existing content
                         DeleteDeveloper();
                         break;
-                   // case "6":
-                        // Go to the Dev Team Console
-                     //   GoToDeveTeamUI();
-                    case "7":
+                    case "6":
+                        // List of developers that need access to PluralSight
+                        DevelopersNoAccessPluralSight();
+                        break;
+                    // case "7":
+                    // Go to the Dev Team Console
+                    //   GoToDeveTeamUI();
+                    case "8":
                         // Exit
                         Console.WriteLine("Good Bye!!");
                         keepRunning = false; // breaks while loop
@@ -114,8 +119,6 @@ namespace KomodoInsurance_Console
                 Console.WriteLine("I could not find the " + developerIDToFind + " in the list of developers.");
             
             }
-
-
         }
 
         private void CreateNewDeveloper()
@@ -180,6 +183,29 @@ namespace KomodoInsurance_Console
                 Console.WriteLine("The developer was NOT deleted from list. Try again.");
             }
         }
+
+        private void DevelopersNoAccessPluralSight()
+        {
+
+            List<DeveloperList> developerList = _developerList.GetDeveloperList();
+
+
+            foreach (DeveloperList developer in developerList)
+            {
+                if (developer.PluralSight == "y")
+                {
+                    continue;
+
+                } else {
+
+                    Console.WriteLine("Name: " + developer.FirstName + " " + developer.LastName + "\n" +
+                    "Developer ID: " + developer.DeveloperID + "\n" +
+                    "PluralSight Access:" + developer.PluralSight);
+                }
+            }
+        }
+
+
 
         private void SeedDeveloperList()
         {

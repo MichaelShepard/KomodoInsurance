@@ -88,7 +88,6 @@ namespace Developer_Repository
 
         }
 
-
         // Helper Methods
 
         public DeveloperList GetDeveloperByID(int developerID)
@@ -102,6 +101,7 @@ namespace Developer_Repository
             }
             return null;
         }
+
   
     }  // END OF DeveloperRepo CLass
 }  // End of name space
