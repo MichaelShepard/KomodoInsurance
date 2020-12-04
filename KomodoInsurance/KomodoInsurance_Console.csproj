@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Developer_Repository\Developer_Repository.csproj" />
+  </ItemGroup>
+
 </Project>

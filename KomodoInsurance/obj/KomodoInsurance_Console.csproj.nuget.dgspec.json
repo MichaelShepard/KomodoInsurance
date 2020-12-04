@@ -4,6 +4,16 @@
     "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\KomodoInsurance\\KomodoInsurance_Console.csproj": {}
   },
   "projects": {
+    "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj",
+        "projectName": "Developer_Repository",
+        "projectPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\KomodoInsurance\\KomodoInsurance_Console.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -26,7 +36,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj": {
+                "projectPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

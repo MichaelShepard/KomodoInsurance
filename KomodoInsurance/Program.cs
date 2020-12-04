@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KomodoInsurance_Console;
+using System;
 
 namespace KomodoInsurance
 {
@@ -6,7 +7,9 @@ namespace KomodoInsurance
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            DeveloperUI program = new DeveloperUI();
+            program.Run();
+            
         }
     }
 }

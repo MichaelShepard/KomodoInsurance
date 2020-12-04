@@ -1,0 +1,16 @@
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\obj\Debug\netcoreapp3.1\KomodoInsurance_Console.csprojAssemblyReference.cache
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\obj\Debug\netcoreapp3.1\KomodoInsurance_Console.AssemblyInfoInputs.cache
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\obj\Debug\netcoreapp3.1\KomodoInsurance_Console.AssemblyInfo.cs
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\obj\Debug\netcoreapp3.1\KomodoInsurance_Console.csproj.CoreCompileInputs.cache
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\bin\Debug\netcoreapp3.1\KomodoInsurance_Console.exe
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\bin\Debug\netcoreapp3.1\KomodoInsurance_Console.deps.json
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\bin\Debug\netcoreapp3.1\KomodoInsurance_Console.runtimeconfig.json
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\bin\Debug\netcoreapp3.1\KomodoInsurance_Console.runtimeconfig.dev.json
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\bin\Debug\netcoreapp3.1\KomodoInsurance_Console.dll
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\bin\Debug\netcoreapp3.1\KomodoInsurance_Console.pdb
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\bin\Debug\netcoreapp3.1\Developer_Repository.dll
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\bin\Debug\netcoreapp3.1\Developer_Repository.pdb
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\obj\Debug\netcoreapp3.1\KomodoInsurance_Console.csproj.CopyComplete
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\obj\Debug\netcoreapp3.1\KomodoInsurance_Console.dll
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\obj\Debug\netcoreapp3.1\KomodoInsurance_Console.pdb
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\obj\Debug\netcoreapp3.1\KomodoInsurance_Console.genruntimeconfig.cache

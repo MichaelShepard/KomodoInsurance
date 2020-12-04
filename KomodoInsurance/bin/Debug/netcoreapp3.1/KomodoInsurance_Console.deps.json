@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "KomodoInsurance_Console/1.0.0": {
+        "dependencies": {
+          "Developer_Repository": "1.0.0"
+        },
+        "runtime": {
+          "KomodoInsurance_Console.dll": {}
+        }
+      },
+      "Developer_Repository/1.0.0": {
+        "runtime": {
+          "Developer_Repository.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KomodoInsurance_Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Developer_Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

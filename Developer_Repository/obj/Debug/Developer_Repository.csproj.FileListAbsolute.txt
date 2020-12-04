@@ -1,0 +1,6 @@
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\Developer_Repository\bin\Debug\Developer_Repository.dll
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\Developer_Repository\bin\Debug\Developer_Repository.pdb
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\Developer_Repository\obj\Debug\Developer_Repository.csprojAssemblyReference.cache
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\Developer_Repository\obj\Debug\Developer_Repository.csproj.CoreCompileInputs.cache
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\Developer_Repository\obj\Debug\Developer_Repository.dll
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\Developer_Repository\obj\Debug\Developer_Repository.pdb
