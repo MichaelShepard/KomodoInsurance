@@ -10,6 +10,15 @@
         "runtime": {
           "bin/placeholder/Developer_Repository.dll": {}
         }
+      },
+      "DevTeam_Repository/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DevTeam_Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevTeam_Repository.dll": {}
+        }
       }
     }
   },
@@ -18,10 +27,16 @@
       "type": "project",
       "path": "../Developer_Repository/Developer_Repository.csproj",
       "msbuildProject": "../Developer_Repository/Developer_Repository.csproj"
+    },
+    "DevTeam_Repository/1.0.0": {
+      "type": "project",
+      "path": "../DevTeam_Repository/DevTeam_Repository.csproj",
+      "msbuildProject": "../DevTeam_Repository/DevTeam_Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "DevTeam_Repository >= 1.0.0",
       "Developer_Repository >= 1.0.0"
     ]
   },
@@ -53,6 +68,9 @@
           "projectReferences": {
             "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj": {
               "projectPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj"
+            },
+            "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\DevTeam_Repository\\DevTeam_Repository.csproj": {
+              "projectPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\DevTeam_Repository\\DevTeam_Repository.csproj"
             }
           }
         }

@@ -14,3 +14,5 @@ C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\obj\Debug\ne
 C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\obj\Debug\netcoreapp3.1\KomodoInsurance_Console.dll
 C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\obj\Debug\netcoreapp3.1\KomodoInsurance_Console.pdb
 C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\obj\Debug\netcoreapp3.1\KomodoInsurance_Console.genruntimeconfig.cache
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\bin\Debug\netcoreapp3.1\DevTeam_Repository.dll
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\KomodoInsurance\bin\Debug\netcoreapp3.1\DevTeam_Repository.pdb

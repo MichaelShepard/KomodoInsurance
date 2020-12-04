@@ -14,6 +14,16 @@
         "net472": {}
       }
     },
+    "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\DevTeam_Repository\\DevTeam_Repository.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\DevTeam_Repository\\DevTeam_Repository.csproj",
+        "projectName": "DevTeam_Repository",
+        "projectPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\DevTeam_Repository\\DevTeam_Repository.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\KomodoInsurance\\KomodoInsurance_Console.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -39,6 +49,9 @@
             "projectReferences": {
               "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj": {
                 "projectPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj"
+              },
+              "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\DevTeam_Repository\\DevTeam_Repository.csproj": {
+                "projectPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\DevTeam_Repository\\DevTeam_Repository.csproj"
               }
             }
           }

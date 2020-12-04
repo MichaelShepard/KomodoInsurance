@@ -8,5 +8,28 @@ namespace DevTeam_Repository
 {
     public class DevTeamRepo
     {
+
+        private List<TeamList> _teamList = new List<TeamList>();
+
+        // Create
+
+        public void AddNewTeam(TeamList content)
+        {
+
+            _teamList.Add(content);
+
+        }
+
+        public List<TeamList> GetTeamList()
+        {
+
+            return _teamList;
+
+        }
+
+
+
     }
+
+   
 }

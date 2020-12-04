@@ -61,9 +61,10 @@ namespace KomodoInsurance_Console
                         // List of developers that need access to PluralSight
                         DevelopersNoAccessPluralSight();
                         break;
-                    // case "7":
-                    // Go to the Dev Team Console
-                    //   GoToDeveTeamUI();
+                    case "7":
+                        // Enter into a new console
+                        GoToDeveTeamUI();
+                        break;
                     case "8":
                         // Exit
                         Console.WriteLine("Good Bye!!");
@@ -73,7 +74,7 @@ namespace KomodoInsurance_Console
                         Console.WriteLine("Please enter a valid number.");
                         break;
                 }
-                Console.WriteLine("Press any key to conitnue...");
+                Console.WriteLine("Press any key to continue...");
                 Console.ReadKey();
                 Console.Clear();
             }
@@ -206,6 +207,13 @@ namespace KomodoInsurance_Console
         }
 
 
+        private void GoToDeveTeamUI()
+        {
+            Console.Clear();
+            DevTeamUI program = new DevTeamUI();
+            program.Run();
+
+        }
 
         private void SeedDeveloperList()
         {

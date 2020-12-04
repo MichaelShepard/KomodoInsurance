@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "KomodoInsurance_Console/1.0.0": {
         "dependencies": {
+          "DevTeam_Repository": "1.0.0",
           "Developer_Repository": "1.0.0"
         },
         "runtime": {
@@ -17,6 +18,11 @@
       "Developer_Repository/1.0.0": {
         "runtime": {
           "Developer_Repository.dll": {}
+        }
+      },
+      "DevTeam_Repository/1.0.0": {
+        "runtime": {
+          "DevTeam_Repository.dll": {}
         }
       }
     }
@@ -28,6 +34,11 @@
       "sha512": ""
     },
     "Developer_Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevTeam_Repository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
