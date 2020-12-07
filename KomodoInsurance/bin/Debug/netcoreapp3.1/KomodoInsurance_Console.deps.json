@@ -21,6 +21,9 @@
         }
       },
       "DevTeam_Repository/1.0.0": {
+        "dependencies": {
+          "Developer_Repository": "1.0.0"
+        },
         "runtime": {
           "DevTeam_Repository.dll": {}
         }

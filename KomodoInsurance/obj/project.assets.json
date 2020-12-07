@@ -13,6 +13,9 @@
       },
       "DevTeam_Repository/1.0.0": {
         "type": "project",
+        "dependencies": {
+          "Developer_Repository": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/DevTeam_Repository.dll": {}
         },

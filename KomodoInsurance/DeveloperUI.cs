@@ -1,18 +1,20 @@
 ﻿using Developer_Repository;
+using DevTeam_Repository;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace KomodoInsurance_Console
 {
-    class DeveloperUI
+    public class DeveloperUI
     {
 
         private DeveloperRepo _developerList = new DeveloperRepo();
+        
 
         public void Run()
         {
-            SeedDeveloperList();
+            //SeedDeveloperList();
             Menu();
         }
 
@@ -85,15 +87,16 @@ namespace KomodoInsurance_Console
 
             Console.Clear();
 
-            List<DeveloperList> developerList = _developerList.GetDeveloperList();
+            List<Developer> developerList = _developerList.GetDeveloperList();
 
 
-            foreach (DeveloperList developer in developerList)
+            foreach (Developer developer in developerList)
             {
                 Console.WriteLine("Name: " + developer.FirstName + " " + developer.LastName + "\n" +
                 "Developer ID: " + developer.DeveloperID + "\n" +
-                "PluralSight Access:" + developer.PluralSight);
-
+                "PluralSight Access:" + developer.PluralSight + "\n" +
+                "Team Name: " + developer.DeveloperTeamID + "\n");
+                
             }
         }
 
@@ -104,20 +107,21 @@ namespace KomodoInsurance_Console
             Console.WriteLine("Enter in the ID that you would like to find:");
 
             // Get the user's input
-            int developerIDToFind = Convert.ToInt32(Console.ReadLine());
+            string input = Console.ReadLine();
 
-            DeveloperList developerList = _developerList.GetDeveloperByID(developerIDToFind);
+            Developer developerList = _developerList.GetDeveloperByID(input);
 
 
             if (developerList != null)
             {
 
                 Console.WriteLine("Congrats.  We were able to find the developer with the name " + developerList.FirstName + " " + developerList.LastName + "\n" +
-                "and a developer ID of " + developerList.DeveloperID + ". Their PluralSight access: " + developerList.PluralSight + ".");
+                "and a developer ID of " + developerList.DeveloperID + ". Their PluralSight access: " + developerList.PluralSight + 
+                ". They are a member of the: " + developerList.DeveloperTeamID);
 
             } else {
 
-                Console.WriteLine("I could not find the " + developerIDToFind + " in the list of developers.");
+                Console.WriteLine("I could not find the " + input + " in the list of developers.");
             
             }
         }
@@ -126,7 +130,7 @@ namespace KomodoInsurance_Console
         {
             Console.Clear();
 
-            DeveloperList newDeveloper = new DeveloperList();
+            Developer newDeveloper = new Developer();
 
             Console.WriteLine("Enter first name of developer:");
             newDeveloper.FirstName = Console.ReadLine();
@@ -135,10 +139,13 @@ namespace KomodoInsurance_Console
             newDeveloper.LastName = Console.ReadLine();
 
             Console.WriteLine("Enter in the developer's ID:");
-            newDeveloper.DeveloperID = Convert.ToInt32(Console.ReadLine());
+            newDeveloper.DeveloperID = Console.ReadLine();
 
             Console.WriteLine("Does the developer have access to PluralSight (y /n):");
             newDeveloper.PluralSight = Console.ReadLine();
+
+            Console.WriteLine("What Team are they a member?");
+            newDeveloper.DeveloperTeamID = Console.ReadLine();
 
             _developerList.AddDeveloperToList(newDeveloper);
         }
@@ -148,9 +155,9 @@ namespace KomodoInsurance_Console
             DisplayDeveloperAll();
 
             Console.WriteLine("Enter in the ID of the developer you would like to update:");
-            int input = Convert.ToInt32(Console.ReadLine());
+            string input = Console.ReadLine();
 
-            DeveloperList newDeveloper = new DeveloperList();
+            Developer newDeveloper = new Developer();
 
             Console.WriteLine("Enter first name of developer:");
             newDeveloper.FirstName = Console.ReadLine();
@@ -159,10 +166,13 @@ namespace KomodoInsurance_Console
             newDeveloper.LastName = Console.ReadLine();
 
             Console.WriteLine("Enter in the develoepr's ID:");
-            newDeveloper.DeveloperID = Convert.ToInt32(Console.ReadLine());
+            newDeveloper.DeveloperID = Console.ReadLine();
 
             Console.WriteLine("Enter in if they have access to PluralSight (y / n)");
             string accessToPluralSight = Console.ReadLine().ToLower();
+
+           // Console.WriteLine("Enter in the team ID:");
+            // newDeveloper.DeveloperTeamID = Console.ReadLine();
 
 
             bool wasUpdated = _developerList.UpdateListOfDevelopers(input, newDeveloper);
@@ -172,26 +182,29 @@ namespace KomodoInsurance_Console
         private void DeleteDeveloper()
         {
             Console.WriteLine("Enter in the developer ID you would like to delete:");
-            int input = Convert.ToInt32(Console.ReadLine());
+            string input = Console.ReadLine();
 
             bool wasDeleted = _developerList.RemoveDeveloperFromList(input);
 
             if(wasDeleted)
             {
+                
                 Console.WriteLine("The developer was deleted from list:");
-            } else
-            {
+            
+            } else {
+
                 Console.WriteLine("The developer was NOT deleted from list. Try again.");
+            
             }
         }
 
         private void DevelopersNoAccessPluralSight()
         {
 
-            List<DeveloperList> developerList = _developerList.GetDeveloperList();
+            List<Developer> developerList = _developerList.GetDeveloperList();
 
 
-            foreach (DeveloperList developer in developerList)
+            foreach (Developer developer in developerList)
             {
                 if (developer.PluralSight == "y")
                 {
@@ -217,15 +230,14 @@ namespace KomodoInsurance_Console
 
         private void SeedDeveloperList()
         {
-            DeveloperList joeProgramer = new DeveloperList("Joe", "Smith", 123444, "y");
+            Developer joeProgramer = new Developer("Joe", "Smith", "12345", "y", "8888");
             _developerList.AddDeveloperToList(joeProgramer);
 
-            DeveloperList fredProgramer = new DeveloperList("Fred", "Arch", 489938, "n");
+            Developer fredProgramer = new Developer("Fred", "Arch", "1111", "n", "8888");
             _developerList.AddDeveloperToList(fredProgramer);
 
-            DeveloperList jillProgramer = new DeveloperList("Jill", "Isthebest", 834928394, "y");
+            Developer jillProgramer = new Developer("Jill", "Isthebest", "834928394", "y", "1234");
             _developerList.AddDeveloperToList(jillProgramer);
-
 
         }
 

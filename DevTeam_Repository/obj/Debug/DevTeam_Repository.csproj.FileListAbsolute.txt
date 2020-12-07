@@ -4,3 +4,6 @@ C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\DevTeam_Repository\obj\Debug
 C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\DevTeam_Repository\obj\Debug\DevTeam_Repository.csproj.CoreCompileInputs.cache
 C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\DevTeam_Repository\obj\Debug\DevTeam_Repository.dll
 C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\DevTeam_Repository\obj\Debug\DevTeam_Repository.pdb
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\DevTeam_Repository\bin\Debug\Developer_Repository.dll
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\DevTeam_Repository\bin\Debug\Developer_Repository.pdb
+C:\Users\M\Desktop\C Sharp Projects\KomodoInsurance\DevTeam_Repository\obj\Debug\DevTeam_Repository.csproj.CopyComplete

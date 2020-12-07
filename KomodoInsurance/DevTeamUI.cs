@@ -1,13 +1,15 @@
-﻿using DevTeam_Repository;
+﻿using Developer_Repository;
+using DevTeam_Repository;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace KomodoInsurance_Console
 {
-    class DevTeamUI
+    public class DevTeamUI
     {
         private DevTeamRepo _teamList = new DevTeamRepo();
+        private DeveloperRepo _devRepo = new DeveloperRepo();
 
         public void Run()
         {
@@ -44,19 +46,19 @@ namespace KomodoInsurance_Console
                         // Create a new team
                         CreateATeam();
                         break;
-                        /* case "3":
-                             // Delete a team
-                             DeleteTeam();
-                             break;
-                         case "4":
-                             // See Developers in a team
-                             DevelopersInATeam();
-                             break;
-                         case "5":
-                             // Add a Developer to a team
-                             AddDeveloeprToTeam();
-                             break;
-                         case "6":
+                    case "3":
+                        // Delete a team
+                        DeleteTeam();
+                        break;
+                    case "4":
+                        // See Developers in a team
+                        DevelopersInATeam();
+                        break;
+                    case "5":
+                        // Add a Developer to a team
+                        AddDeveloperToTeam();
+                        break;
+                   /*      case "6":
                              // Remove a Developer from a team
                              DeleteDeveloperFromTeam();
                              break; */
@@ -74,7 +76,7 @@ namespace KomodoInsurance_Console
                         Console.WriteLine("Please enter a valid number.");
                         break;
                 }
-                Console.WriteLine("Press any key to conitnue...");
+                Console.WriteLine("Press any key to continue...");
                 Console.ReadKey();
                 Console.Clear();
             }
@@ -84,10 +86,10 @@ namespace KomodoInsurance_Console
         {
             Console.Clear();
 
-            List<TeamList> teamList = _teamList.GetTeamList();
+            List<DevTeam> teamList = _teamList.GetTeamList();
 
 
-            foreach (TeamList team in teamList)
+            foreach (DevTeam team in teamList)
             {
                 Console.WriteLine("Team Name: " + team.TeamName + "\n" +
                 "Team ID: " + team.TeamID + "\n");
@@ -99,18 +101,82 @@ namespace KomodoInsurance_Console
         {
             Console.Clear();
 
-            TeamList newTeam = new TeamList();
+            DevTeam newTeam = new DevTeam();
 
             Console.WriteLine("Enter name of team:");
-            newTeam.TeamName = Console.ReadLine();
+            newTeam.TeamName = Console.ReadLine().ToLower();
 
             Console.WriteLine("Enter in the Team's ID:");
-            newTeam.TeamID   = Convert.ToInt32(Console.ReadLine());
+            newTeam.TeamID   = Console.ReadLine().ToLower();
 
             _teamList.AddNewTeam(newTeam);
 
         }
 
+        public void DeleteTeam()
+        {
+            
+            Console.WriteLine("Enter the team name you would like to delete:");
+            string input = Console.ReadLine().ToLower();
+
+            bool wasDeleted = _teamList.DeleteTeam(input);
+
+            if (wasDeleted)
+            {
+                Console.WriteLine("Team was deleted from list:");
+            }
+            else
+            {
+                Console.WriteLine("Team was NOT deleted from list. Try again.");
+            }
+
+        }
+
+        private void DevelopersInATeam()
+        {
+
+            DisplayTeams();
+            Console.WriteLine("What team would you like to see the membership? Enter Team ID");
+            string input = Console.ReadLine().ToLower();
+
+            
+            List<Developer> localDevList = _devRepo.GetDeveloperList();
+
+            foreach (Developer developer in localDevList)
+            {
+
+                if (developer.DeveloperTeamID == input)
+                {
+                    Console.WriteLine(developer.FirstName + " " + developer.LastName);
+                }
+            }
+        }
+
+        private void AddDeveloperToTeam()
+        {
+
+            Console.Clear();
+
+            List<Developer> localDevList = _devRepo.GetDeveloperList(); // creates an instance of developer
+
+            foreach (Developer developer in localDevList)
+            {
+                Console.WriteLine("Name: " + developer.FirstName + " " + developer.LastName + "\n" +
+                "Developer ID: " + developer.DeveloperID + "\n");
+
+            }
+
+            Developer newDeveloper = new Developer();
+
+            Console.WriteLine("Enter in the ID of the developer you would like to update:");
+            string input = Console.ReadLine();
+
+            Console.WriteLine("Enter in the team ID:");
+            newDeveloper.DeveloperTeamID = Console.ReadLine();
+
+            bool wasUpdated = _devRepo.UpdateTeamforDeveloper(input, newDeveloper);
+
+        }
 
         private void GoToDeveloperUI()
         {
@@ -121,13 +187,19 @@ namespace KomodoInsurance_Console
 
         }
 
+        //HELPER Methods
+
         private void SeedTeamList()
         {
-            TeamList firstTeam = new TeamList("Article 1", 123444);
+            DevTeam firstTeam = new DevTeam("Article 1", "8888");
             _teamList.AddNewTeam(firstTeam);
+
+            DevTeam secondTeam = new DevTeam("Great Team", "1234");
+            _teamList.AddNewTeam(secondTeam);
 
         }
 
 
-        } //End Dev Team UI Class
+
+    } //End Dev Team UI Class
 } //End Name Space

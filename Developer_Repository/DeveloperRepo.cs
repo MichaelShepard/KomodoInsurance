@@ -9,12 +9,11 @@ namespace Developer_Repository
     public class DeveloperRepo
     {
 
-
-        private List<DeveloperList> _listOfDevelopers = new List<DeveloperList>();
+        private static List<Developer> _listOfDevelopers = new List<Developer>();
 
         // Create
 
-        public void AddDeveloperToList(DeveloperList content)
+        public void AddDeveloperToList(Developer content)
         {
            
             _listOfDevelopers.Add(content);
@@ -23,7 +22,7 @@ namespace Developer_Repository
 
         // Read
 
-        public List<DeveloperList> GetDeveloperList()
+        public List<Developer> GetDeveloperList()
         {
 
             return _listOfDevelopers;
@@ -34,11 +33,11 @@ namespace Developer_Repository
         // Update
 
 
-        public bool UpdateListOfDevelopers(int developerID, DeveloperList newContent)
+        public bool UpdateListOfDevelopers(string developerID, Developer newContent)
         {
 
             // Find content
-            DeveloperList oldContent = GetDeveloperByID(developerID);
+            Developer oldContent = GetDeveloperByID(developerID);
 
 
 
@@ -59,9 +58,37 @@ namespace Developer_Repository
 
         }
 
+        public bool UpdateTeamforDeveloper(string developerID, Developer newContent)
+        {
+
+
+            // Find content
+            Developer oldContent = GetDeveloperByID(developerID);
+
+
+
+            // Update content
+            if (oldContent != null)
+            {
+                oldContent.FirstName = oldContent.FirstName;
+                oldContent.LastName = oldContent.LastName;
+                oldContent.DeveloperID = oldContent.DeveloperID;
+                oldContent.PluralSight = oldContent.PluralSight;
+                oldContent.DeveloperTeamID = newContent.DeveloperTeamID;
+                return true;
+
+            }
+            else
+            {
+
+                return false;
+            }
+
+
+        }
 
         // Delete
-        public bool RemoveDeveloperFromList (int developerID) 
+        public bool RemoveDeveloperFromList (string developerID) 
         {
 
             var developerInfo = GetDeveloperByID(developerID);
@@ -90,16 +117,18 @@ namespace Developer_Repository
 
         // Helper Methods
 
-        public DeveloperList GetDeveloperByID(int developerID)
+        public Developer GetDeveloperByID(string developerID)
         {
-            foreach (DeveloperList content in _listOfDevelopers)
+            foreach (Developer content in _listOfDevelopers)
             {
                 if (content.DeveloperID == developerID)
                 {
                     return content;
                 }
             }
+
             return null;
+        
         }
 
   

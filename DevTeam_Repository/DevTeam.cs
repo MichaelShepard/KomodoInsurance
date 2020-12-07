@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Developer_Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace DevTeam_Repository
 {
-    public class TeamList
+    public class DevTeam
     {
 
         public string TeamName { get; set; }
 
-        public int TeamID { get; set; }
+        public string TeamID { get; set; }
 
 
-        public TeamList() { }
+        public DevTeam() { }
 
-        public TeamList(string teamName, int teamID)
+        public DevTeam(string teamName, string teamID)
         {
             TeamName = teamName;
             TeamID = teamID;

@@ -18,7 +18,16 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\DevTeam_Repository\\DevTeam_Repository.csproj",
         "projectName": "DevTeam_Repository",
-        "projectPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\DevTeam_Repository\\DevTeam_Repository.csproj"
+        "projectPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\DevTeam_Repository\\DevTeam_Repository.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj": {
+                "projectPath": "C:\\Users\\M\\Desktop\\C Sharp Projects\\KomodoInsurance\\Developer_Repository\\Developer_Repository.csproj"
+              }
+            }
+          }
+        }
       },
       "frameworks": {
         "net472": {}
