@@ -58,10 +58,10 @@ namespace KomodoInsurance_Console
                         // Add a Developer to a team
                         AddDeveloperToTeam();
                         break;
-                   /*      case "6":
-                             // Remove a Developer from a team
-                             DeleteDeveloperFromTeam();
-                             break; */
+                   case "6":
+                        // Remove a Developer from a team
+                         DeleteDeveloperFromTeam();
+                         break; 
                     case "7":
                         // Go to the Dev Team Console
                         GoToDeveloperUI(); 
@@ -177,6 +177,33 @@ namespace KomodoInsurance_Console
             bool wasUpdated = _devRepo.UpdateTeamforDeveloper(input, newDeveloper);
 
         }
+
+
+       private void DeleteDeveloperFromTeam()
+        {
+
+            Console.Clear();
+
+            List<Developer> localDevList = _devRepo.GetDeveloperList(); // creates an instance of developer
+
+            foreach (Developer developer in localDevList)
+            {
+                Console.WriteLine("Name: " + developer.FirstName + " " + developer.LastName + "\n" +
+                "Developer ID: " + developer.DeveloperID + "\n");
+
+            }
+
+            Developer newDeveloper = new Developer();
+
+            Console.WriteLine("Enter in the ID of the developer you would like to remove from team:");
+            string input = Console.ReadLine();
+
+            Console.WriteLine("Enter the new team ID or leave blank if not team:");
+            newDeveloper.DeveloperTeamID = Console.ReadLine();
+
+            bool wasUpdated = _devRepo.RemoveDeveloperFromTeam(input, newDeveloper);
+        }
+
 
         private void GoToDeveloperUI()
         {

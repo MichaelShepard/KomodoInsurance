@@ -67,7 +67,7 @@ namespace Developer_Repository
 
 
 
-            // Update content
+            // Update team
             if (oldContent != null)
             {
                 oldContent.FirstName = oldContent.FirstName;
@@ -109,6 +109,37 @@ namespace Developer_Repository
 
             } else {
             
+                return false;
+            }
+
+
+        }
+
+
+        
+        public bool RemoveDeveloperFromTeam(string developerID, Developer newContent)
+        {
+
+
+            // Find content
+            Developer oldContent = GetDeveloperByID(developerID);
+
+
+
+            // Update team
+            if (oldContent != null)
+            {
+                oldContent.FirstName = oldContent.FirstName;
+                oldContent.LastName = oldContent.LastName;
+                oldContent.DeveloperID = oldContent.DeveloperID;
+                oldContent.PluralSight = oldContent.PluralSight;
+                oldContent.DeveloperTeamID = newContent.DeveloperTeamID;
+                return true;
+
+            }
+            else
+            {
+
                 return false;
             }
 
